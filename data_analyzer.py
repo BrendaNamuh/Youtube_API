@@ -132,4 +132,3 @@ if __name__ == '__main__':
 
     plt.show()
 
-# https://matplotlib.org/stable/tutorials/text/text_intro.html
