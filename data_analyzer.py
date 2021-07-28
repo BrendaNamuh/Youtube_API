@@ -12,9 +12,8 @@ from matplotlib import animation
 - most liked channel
 - least viewed video you liked
 - most viewed video you like
--Pie chart . Slice is channel subscription. Shade is likes given.
+- Animated bar chart representing likes given over time to 10 channels.
 
-(most dislike video you liked, most liked video you liked)
 '''
 
 
@@ -101,26 +100,7 @@ def animate(i):
 
 
 if __name__ == '__main__':
-    ''' 
-    y1 = [random.randint(0, 4) + (i**1.4)/(random.randint(10, 12)) for i in range(0, 180, 2) ]
-    t = range(len(y1))
-
-    # Initiate chart figure
-    fig = plt.figure(figsize=(12,5))
-
-    # Add an Axes to the figure as part of a subplot arrangement.
-    axes = fig.add_subplot(1,1,1)
-    axes.set_ylim(0, 200)
-    axes.set_xlim(0, 100)
-    plt.style.use("seaborn")
-    #chart
-    #function that animates chart i.e each iteration of function constructs 1 frame of animation
-    #delay between frames in ms
-    ani = FuncAnimation(fig=fig, func=animate, interval=20, frames = len(y1), repeat=False)
-
-    #plt.show()
-    '''
-    # ----- Prepare data for plot
+    # -------------- Prepare data for plot
 
     # 10 most liked channels
     topChannels = topten_likedChannels(df)
@@ -137,7 +117,7 @@ if __name__ == '__main__':
     # Initialize y axis of plot
     likes = [0] * len(topChannels)
 
-    #---- Set up figure and plot
+    #--------------- Set up figure and plot
 
     # Initiate chart figure
     fig = plt.figure(figsize=(12, 5))
